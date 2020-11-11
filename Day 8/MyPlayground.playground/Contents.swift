@@ -42,3 +42,16 @@ struct App {
 }
 
 let spotify = App(name: "Spotify")
+
+class Reading {
+    var value = 0.0
+}
+class TemperatureReading: Reading { }
+let temperature = TemperatureReading()
+if let reading = temperature as? Reading {
+    print("The reading is \(reading.value).")
+}
+
+var age: Int!
+age = 38
+print(age)
