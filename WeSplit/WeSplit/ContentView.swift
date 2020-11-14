@@ -7,6 +7,20 @@
 
 import SwiftUI
 
+struct Title: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.largeTitle)
+            .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+    }
+}
+
+extension View {
+    func titleStyles() -> some View {
+        self.modifier(Title())
+    }
+}
+
 struct ContentView: View {
     @State private var checkAmount = ""
     @State private var numberOfPeople = "1"
@@ -67,6 +81,7 @@ struct ContentView: View {
                 
                 Section(header: Text("Total amount for the check")) {
                     Text("$ \(totalAmount, specifier: "%.2f")")
+                        .foregroundColor(tipPercentage==0 ? .red : .black )
                 }
             }
             .navigationBarTitle("WeSplit")
