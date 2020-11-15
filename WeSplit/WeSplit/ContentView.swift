@@ -76,11 +76,11 @@ struct ContentView: View {
                 }
                 
                 Section(header: Text("Amount per person")) {
-                    Text("$ \(totalPerPerson, specifier: "%.2f")")
+                    Text("$ \(totalPerPerson, specifier: "%g")")
                 }
                 
                 Section(header: Text("Total amount for the check")) {
-                    Text("$ \(totalAmount, specifier: "%.2f")")
+                    Text("$ \(totalAmount, specifier: "%g")")
                         .foregroundColor(tipPercentage==0 ? .red : .black )
                 }
             }
