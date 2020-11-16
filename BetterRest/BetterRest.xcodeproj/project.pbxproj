@@ -11,6 +11,7 @@
 		970C2F7B256187D900EEC4A6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970C2F7A256187D900EEC4A6 /* ContentView.swift */; };
 		970C2F7D256187DB00EEC4A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 970C2F7C256187DB00EEC4A6 /* Assets.xcassets */; };
 		970C2F80256187DB00EEC4A6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 970C2F7F256187DB00EEC4A6 /* Preview Assets.xcassets */; };
+		9730DCBB256255A50087252F /* SleepCalculator.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9730DCBA256255A50087252F /* SleepCalculator.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		970C2F7C256187DB00EEC4A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		970C2F7F256187DB00EEC4A6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		970C2F81256187DB00EEC4A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9730DCBA256255A50087252F /* SleepCalculator.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SleepCalculator.mlmodel; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 		970C2F77256187D900EEC4A6 /* BetterRest */ = {
 			isa = PBXGroup;
 			children = (
+				9730DCBA256255A50087252F /* SleepCalculator.mlmodel */,
 				970C2F78256187D900EEC4A6 /* BetterRestApp.swift */,
 				970C2F7A256187D900EEC4A6 /* ContentView.swift */,
 				970C2F7C256187DB00EEC4A6 /* Assets.xcassets */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9730DCBB256255A50087252F /* SleepCalculator.mlmodel in Sources */,
 				970C2F7B256187D900EEC4A6 /* ContentView.swift in Sources */,
 				970C2F79256187D900EEC4A6 /* BetterRestApp.swift in Sources */,
 			);
