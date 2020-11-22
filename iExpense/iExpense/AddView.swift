@@ -13,6 +13,7 @@ struct AddView: View {
     @State private var name = ""
     @State private var type = "Personal"
     @State private var amount = ""
+    @State private var isShowAlert = false
     
     static let types = ["Business", "Personal"]
     
@@ -30,12 +31,17 @@ struct AddView: View {
             }
             .navigationBarTitle("Add new expense")
             .navigationBarItems(trailing: Button("Save") {
-                if let actualAmount = Int(self.amount) {
-                    let item = ExpenseItem(name: self.name, type: self.type, amount: actualAmount)
-                    self.expenses.items.append(item)
-                    self.presentationMode.wrappedValue.dismiss()
+                if let actualAmount = Int(amount) {
+                    let item = ExpenseItem(name: name, type: type, amount: actualAmount)
+                    expenses.items.append(item)
+                    presentationMode.wrappedValue.dismiss()
+                } else {
+                    isShowAlert = true
                 }
             })
+            .alert(isPresented: $isShowAlert) {
+                Alert(title: Text("Error"), message: Text("You are expected to enter a numeric value"), dismissButton: .default(Text("Ok")))
+            }
         }
     }
 }

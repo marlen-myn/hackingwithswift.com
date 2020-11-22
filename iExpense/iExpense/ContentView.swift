@@ -7,9 +7,31 @@
 
 import SwiftUI
 
+struct ExpenseStyle: ViewModifier {
+    var amount: Int
+    
+    func body(content: Content) -> some View {
+        var color = Color.primary
+        if amount < 10 {
+            color = Color.primary
+        } else if (amount < 100) {
+            color = Color.orange
+        } else {
+            color = Color.red
+        }
+        return content
+            .foregroundColor(color)
+    }
+}
+
+extension View {
+    func amountStyle(_ amount: Int) -> some View {
+        self.modifier(ExpenseStyle(amount: amount))
+    }
+}
 
 struct ExpenseItem: Identifiable, Codable {
-    let id = UUID()
+    var id = UUID()
     let name: String
     let type: String
     let amount: Int
@@ -54,22 +76,20 @@ struct ContentView: View {
                         }
                         
                         Spacer()
-                        Text("$\(item.amount)")
+                        Text("\(item.amount) $")
+                            .amountStyle(item.amount)
                     }
                 }
                 .onDelete(perform: removeItems)
             }
-            .navigationBarTitle("iExpense")
-            
-            .navigationBarItems(leading: EditButton(),
-                                trailing: Button(action: {
-                                    self.showingAddExpense = true
-                                }){
-                                    Image(systemName: "plus")
-                                }
-            )
+            .navigationBarTitle("iExpense", displayMode: .inline)
+            .navigationBarItems(leading: EditButton(), trailing: Button(action: {
+                self.showingAddExpense = true
+            }){
+                Image(systemName: "plus")
+            })
             .sheet(isPresented: $showingAddExpense) {
-                AddView(expenses: self.expenses)
+                AddView(expenses: expenses)
             }
         }
     }
