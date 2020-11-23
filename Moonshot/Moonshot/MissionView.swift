@@ -74,6 +74,6 @@ struct MissionView_Previews: PreviewProvider {
     static let astronauts:[Astronaut] = Astronaut.allAustronauts
     
     static var previews: some View {
-        MissionView(mission: missions[0], astronauts: astronauts)
+        MissionView(mission: missions[6], astronauts: astronauts)
     }
 }
