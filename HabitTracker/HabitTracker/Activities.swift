@@ -8,9 +8,9 @@
 import Foundation
 
 class Activities: ObservableObject {
-    @Published var activitites : [Activity] {
+    @Published var items : [Activity] {
         didSet {
-            if let encoded = try? JSONEncoder().encode(activitites) {
+            if let encoded = try? JSONEncoder().encode(items) {
                 UserDefaults.standard.set(encoded, forKey: "activities")
             }
         }
@@ -19,18 +19,18 @@ class Activities: ObservableObject {
     init() {
         if let data = UserDefaults.standard.data(forKey: "activities") {
             if let decodedData = try? JSONDecoder().decode([Activity].self, from: data) {
-                activitites = decodedData
+                items = decodedData
                 return
             }
         }
-        self.activitites = []
+        items = []
     }
     
     func deleteActivity(at offset: IndexSet) {
-        activitites.remove(atOffsets: offset)
+        items.remove(atOffsets: offset)
     }
     
     func addActivity(_ activity: Activity) {
-        activitites.append(activity)
+        items.append(activity)
     }
 }

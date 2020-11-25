@@ -14,13 +14,13 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(activitites.activitites) { activity in
-                    NavigationLink(destination: ActivityEditView(activity:activity, activitites:activitites)) {
+                ForEach(0..<activitites.items.count) { index in
+                    NavigationLink(destination: ActivityEditView(activityIndex:index, activitites:activitites)) {
                         VStack {
                             HStack {
-                                Text(activity.title)
+                                Text(activitites.items[index].title)
                                 Spacer()
-                                Text("completed: \(activity.completionCount) times")
+                                Text("completed: \(activitites.items[index].completionCount) times")
                             }
                         }
                     }
