@@ -8,30 +8,29 @@
 import SwiftUI
 
 struct ActivityEditView: View {
-    let activityIndex: Int
-    @ObservedObject var activitites: Activities
+    @Binding var activity: Activity
     
     var body: some View {
         Form {
             Section(header: Text("Title")) {
-                TextField("Title", text: $activitites.items[activityIndex].title)
+                TextField("Title", text: $activity.title)
             }
             Section(header: Text("Description")) {
-                TextField("Description", text: $activitites.items[activityIndex].description)
+                TextField("Description", text: $activity.description)
             }
             Section(header: Text("Times completed")) {
-                Stepper(value: $activitites.items[activityIndex].completionCount,
-                        in: 0...100){
-                    Text("\(activitites.items[activityIndex].completionCount)")
+                Stepper(value: $activity.completionCount, in: 0...100) {
+                    Text("\(activity.completionCount)")
                 }
             }
         }
-        .navigationTitle(Text(activitites.items[activityIndex].title))
+        .navigationTitle(Text(activity.title))
     }
 }
 
-struct ActivityEditView_Previews: PreviewProvider {
-    static var previews: some View {
-        ActivityEditView(activityIndex: 0, activitites: Activities())
-    }
-}
+//struct ActivityEditView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        @ObservedObject let model = Activities()
+//        ActivityEditView(activity: $model.items[0])
+//    }
+//}
