@@ -1,14 +1,14 @@
 //
-//  TestDrawingApp.swift
-//  TestDrawing
+//  CupcakeCornerApp.swift
+//  CupcakeCorner
 //
-//  Created by Marlen Mynzhassar on 24.11.2020.
+//  Created by Marlen Mynzhassar on 26.11.2020.
 //
 
 import SwiftUI
 
 @main
-struct TestDrawingApp: App {
+struct CupcakeCornerApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

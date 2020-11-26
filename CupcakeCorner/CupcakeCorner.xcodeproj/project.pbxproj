@@ -7,23 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		97369F32256CE1E50024595F /* TestDrawingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97369F31256CE1E50024595F /* TestDrawingApp.swift */; };
-		97369F34256CE1E50024595F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97369F33256CE1E50024595F /* ContentView.swift */; };
-		97369F36256CE1EA0024595F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97369F35256CE1EA0024595F /* Assets.xcassets */; };
-		97369F39256CE1EA0024595F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97369F38256CE1EA0024595F /* Preview Assets.xcassets */; };
+		97D3295D2570154800FEBD3F /* CupcakeCornerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D3295C2570154800FEBD3F /* CupcakeCornerApp.swift */; };
+		97D3295F2570154800FEBD3F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D3295E2570154800FEBD3F /* ContentView.swift */; };
+		97D329612570154F00FEBD3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97D329602570154F00FEBD3F /* Assets.xcassets */; };
+		97D329642570154F00FEBD3F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97D329632570154F00FEBD3F /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		97369F2E256CE1E50024595F /* TestDrawing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestDrawing.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		97369F31256CE1E50024595F /* TestDrawingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDrawingApp.swift; sourceTree = "<group>"; };
-		97369F33256CE1E50024595F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		97369F35256CE1EA0024595F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		97369F38256CE1EA0024595F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		97369F3A256CE1EA0024595F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97D329592570154800FEBD3F /* CupcakeCorner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CupcakeCorner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		97D3295C2570154800FEBD3F /* CupcakeCornerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupcakeCornerApp.swift; sourceTree = "<group>"; };
+		97D3295E2570154800FEBD3F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		97D329602570154F00FEBD3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		97D329632570154F00FEBD3F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		97D329652570154F00FEBD3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		97369F2B256CE1E50024595F /* Frameworks */ = {
+		97D329562570154800FEBD3F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,38 +33,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		97369F25256CE1E50024595F = {
+		97D329502570154800FEBD3F = {
 			isa = PBXGroup;
 			children = (
-				97369F30256CE1E50024595F /* TestDrawing */,
-				97369F2F256CE1E50024595F /* Products */,
+				97D3295B2570154800FEBD3F /* CupcakeCorner */,
+				97D3295A2570154800FEBD3F /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		97369F2F256CE1E50024595F /* Products */ = {
+		97D3295A2570154800FEBD3F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				97369F2E256CE1E50024595F /* TestDrawing.app */,
+				97D329592570154800FEBD3F /* CupcakeCorner.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		97369F30256CE1E50024595F /* TestDrawing */ = {
+		97D3295B2570154800FEBD3F /* CupcakeCorner */ = {
 			isa = PBXGroup;
 			children = (
-				97369F31256CE1E50024595F /* TestDrawingApp.swift */,
-				97369F33256CE1E50024595F /* ContentView.swift */,
-				97369F35256CE1EA0024595F /* Assets.xcassets */,
-				97369F3A256CE1EA0024595F /* Info.plist */,
-				97369F37256CE1EA0024595F /* Preview Content */,
+				97D3295C2570154800FEBD3F /* CupcakeCornerApp.swift */,
+				97D3295E2570154800FEBD3F /* ContentView.swift */,
+				97D329602570154F00FEBD3F /* Assets.xcassets */,
+				97D329652570154F00FEBD3F /* Info.plist */,
+				97D329622570154F00FEBD3F /* Preview Content */,
 			);
-			path = TestDrawing;
+			path = CupcakeCorner;
 			sourceTree = "<group>";
 		};
-		97369F37256CE1EA0024595F /* Preview Content */ = {
+		97D329622570154F00FEBD3F /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				97369F38256CE1EA0024595F /* Preview Assets.xcassets */,
+				97D329632570154F00FEBD3F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -72,38 +72,38 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		97369F2D256CE1E50024595F /* TestDrawing */ = {
+		97D329582570154800FEBD3F /* CupcakeCorner */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 97369F3D256CE1EA0024595F /* Build configuration list for PBXNativeTarget "TestDrawing" */;
+			buildConfigurationList = 97D329682570154F00FEBD3F /* Build configuration list for PBXNativeTarget "CupcakeCorner" */;
 			buildPhases = (
-				97369F2A256CE1E50024595F /* Sources */,
-				97369F2B256CE1E50024595F /* Frameworks */,
-				97369F2C256CE1E50024595F /* Resources */,
+				97D329552570154800FEBD3F /* Sources */,
+				97D329562570154800FEBD3F /* Frameworks */,
+				97D329572570154800FEBD3F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = TestDrawing;
-			productName = TestDrawing;
-			productReference = 97369F2E256CE1E50024595F /* TestDrawing.app */;
+			name = CupcakeCorner;
+			productName = CupcakeCorner;
+			productReference = 97D329592570154800FEBD3F /* CupcakeCorner.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		97369F26256CE1E50024595F /* Project object */ = {
+		97D329512570154800FEBD3F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1220;
 				LastUpgradeCheck = 1220;
 				TargetAttributes = {
-					97369F2D256CE1E50024595F = {
+					97D329582570154800FEBD3F = {
 						CreatedOnToolsVersion = 12.2;
 					};
 				};
 			};
-			buildConfigurationList = 97369F29256CE1E50024595F /* Build configuration list for PBXProject "TestDrawing" */;
+			buildConfigurationList = 97D329542570154800FEBD3F /* Build configuration list for PBXProject "CupcakeCorner" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -111,42 +111,42 @@
 				en,
 				Base,
 			);
-			mainGroup = 97369F25256CE1E50024595F;
-			productRefGroup = 97369F2F256CE1E50024595F /* Products */;
+			mainGroup = 97D329502570154800FEBD3F;
+			productRefGroup = 97D3295A2570154800FEBD3F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				97369F2D256CE1E50024595F /* TestDrawing */,
+				97D329582570154800FEBD3F /* CupcakeCorner */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		97369F2C256CE1E50024595F /* Resources */ = {
+		97D329572570154800FEBD3F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97369F39256CE1EA0024595F /* Preview Assets.xcassets in Resources */,
-				97369F36256CE1EA0024595F /* Assets.xcassets in Resources */,
+				97D329642570154F00FEBD3F /* Preview Assets.xcassets in Resources */,
+				97D329612570154F00FEBD3F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		97369F2A256CE1E50024595F /* Sources */ = {
+		97D329552570154800FEBD3F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97369F34256CE1E50024595F /* ContentView.swift in Sources */,
-				97369F32256CE1E50024595F /* TestDrawingApp.swift in Sources */,
+				97D3295F2570154800FEBD3F /* ContentView.swift in Sources */,
+				97D3295D2570154800FEBD3F /* CupcakeCornerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		97369F3B256CE1EA0024595F /* Debug */ = {
+		97D329662570154F00FEBD3F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -207,7 +207,7 @@
 			};
 			name = Debug;
 		};
-		97369F3C256CE1EA0024595F /* Release */ = {
+		97D329672570154F00FEBD3F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -262,44 +262,44 @@
 			};
 			name = Release;
 		};
-		97369F3E256CE1EA0024595F /* Debug */ = {
+		97D329692570154F00FEBD3F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"TestDrawing/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CupcakeCorner/Preview Content\"";
 				DEVELOPMENT_TEAM = H2E5DU6HUE;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = TestDrawing/Info.plist;
+				INFOPLIST_FILE = CupcakeCorner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.myn.marlen.TestDrawing;
+				PRODUCT_BUNDLE_IDENTIFIER = com.myn.marlen.CupcakeCorner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		97369F3F256CE1EA0024595F /* Release */ = {
+		97D3296A2570154F00FEBD3F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"TestDrawing/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CupcakeCorner/Preview Content\"";
 				DEVELOPMENT_TEAM = H2E5DU6HUE;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = TestDrawing/Info.plist;
+				INFOPLIST_FILE = CupcakeCorner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.myn.marlen.TestDrawing;
+				PRODUCT_BUNDLE_IDENTIFIER = com.myn.marlen.CupcakeCorner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -309,25 +309,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		97369F29256CE1E50024595F /* Build configuration list for PBXProject "TestDrawing" */ = {
+		97D329542570154800FEBD3F /* Build configuration list for PBXProject "CupcakeCorner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				97369F3B256CE1EA0024595F /* Debug */,
-				97369F3C256CE1EA0024595F /* Release */,
+				97D329662570154F00FEBD3F /* Debug */,
+				97D329672570154F00FEBD3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		97369F3D256CE1EA0024595F /* Build configuration list for PBXNativeTarget "TestDrawing" */ = {
+		97D329682570154F00FEBD3F /* Build configuration list for PBXNativeTarget "CupcakeCorner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				97369F3E256CE1EA0024595F /* Debug */,
-				97369F3F256CE1EA0024595F /* Release */,
+				97D329692570154F00FEBD3F /* Debug */,
+				97D3296A2570154F00FEBD3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 97369F26256CE1E50024595F /* Project object */;
+	rootObject = 97D329512570154800FEBD3F /* Project object */;
 }
