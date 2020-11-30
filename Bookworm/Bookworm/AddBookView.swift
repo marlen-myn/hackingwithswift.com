@@ -46,13 +46,23 @@ struct AddBookView: View {
                         newBook.rating = Int16(rating)
                         newBook.genre = genre
                         newBook.review = review
+                        newBook.date = Date()
 
                         try? self.moc.save()
                         presentationMode.wrappedValue.dismiss()
                     }
                 }
+                .disabled(isFormInValid)
             }
             .navigationBarTitle("Add Book")
+        }
+    }
+    
+    var isFormInValid: Bool {
+        if title.isEmpty || author.isEmpty || genre.isEmpty || genre.isEmpty || review.isEmpty {
+            return true
+        } else {
+            return false
         }
     }
 }
