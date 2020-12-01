@@ -13,11 +13,13 @@ import CoreImage.CIFilterBuiltins
 struct ContentView: View {
     @State private var image: Image?
     @State private var filterIntensity = 0.5
+    @State private var filterRadius = 1.0
     @State private var showingImagePicker = false
     @State private var inputImage: UIImage?
     @State private var currentFilter: CIFilter = CIFilter.sepiaTone()
     @State private var showingFilterSheet = false
     @State private var processedImage: UIImage?
+    @State private var showingAlert = false
     let context = CIContext()
     
     var body: some View {
@@ -27,6 +29,15 @@ struct ContentView: View {
             },
             set: {
                 filterIntensity = $0
+                applyProcessing()
+            }
+        )
+        let radius = Binding<Double>(
+            get: {
+                filterRadius
+            },
+            set: {
+                filterRadius = $0
                 applyProcessing()
             }
         )
@@ -56,14 +67,22 @@ struct ContentView: View {
                 }.padding(.vertical)
                 
                 HStack {
-                    Button("Change Filter") {
+                    Text("Radius")
+                    Slider(value: radius)
+                }.padding(.vertical)
+                
+                HStack {
+                    Button("\(currentFilter.name.replacingOccurrences(of: "CI", with: ""))") {
                         showingFilterSheet = true
                     }
                     
                     Spacer()
                     
                     Button("Save") {
-                        guard let processedImage = processedImage else { return }
+                        guard let processedImage = processedImage else {
+                            showingAlert = true
+                            return
+                        }
                         
                         let imageSaver = ImageSaver()
                         
@@ -96,6 +115,9 @@ struct ContentView: View {
                         .cancel()
                 ])
             }
+            .alert(isPresented: $showingAlert) {
+                Alert(title: Text("Error"), message: Text("Choose an image first"), dismissButton: .default(Text("Ok")))
+            }
         }
     }
     
@@ -115,7 +137,7 @@ struct ContentView: View {
     func applyProcessing() {
         let inputKeys = currentFilter.inputKeys
         if inputKeys.contains(kCIInputIntensityKey) { currentFilter.setValue(filterIntensity, forKey: kCIInputIntensityKey) }
-        if inputKeys.contains(kCIInputRadiusKey) { currentFilter.setValue(filterIntensity * 200, forKey: kCIInputRadiusKey) }
+        if inputKeys.contains(kCIInputRadiusKey) { currentFilter.setValue(filterRadius * 200, forKey: kCIInputRadiusKey) }
         if inputKeys.contains(kCIInputScaleKey) { currentFilter.setValue(filterIntensity * 10, forKey: kCIInputScaleKey) }
         
         guard let outputImage = currentFilter.outputImage else { return }
