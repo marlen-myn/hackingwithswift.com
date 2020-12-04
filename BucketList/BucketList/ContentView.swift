@@ -64,6 +64,8 @@ struct ContentView: View {
     @State private var showingPlaceDetails = false
     @State private var showingEditScreen = false
     @State private var isUnlocked = false
+    @State private var isBiometricError = false
+    @State private var biometricErrorDescription = ""
     
     var body: some View {
         
@@ -91,9 +93,15 @@ struct ContentView: View {
             }
         }
         .alert(isPresented: $showingPlaceDetails) {
-            Alert(title: Text(selectedPlace?.title ?? "Unknown"), message: Text(selectedPlace?.subtitle ?? "Missing place information."), primaryButton: .default(Text("OK")), secondaryButton: .default(Text("Edit")) {
-                showingEditScreen = true
-            })
+            if isBiometricError {
+                return Alert(title: Text("Biometric Error"), message: Text(biometricErrorDescription), dismissButton: .default(Text("Ok")) {
+                    isBiometricError = false
+                })
+            } else {
+                return Alert(title: Text(selectedPlace?.title ?? "Unknown"), message: Text(selectedPlace?.subtitle ?? "Missing place information."), primaryButton: .default(Text("OK")), secondaryButton: .default(Text("Edit")) {
+                    showingEditScreen = true
+                })
+            }
         }
         .sheet(isPresented: $showingEditScreen, onDismiss: saveData) {
             if selectedPlace != nil {
@@ -142,7 +150,9 @@ struct ContentView: View {
                     if success {
                         isUnlocked = true
                     } else {
-                        //print("\(authenticationError?.localizedDescription)")
+                        showingPlaceDetails = true
+                        isBiometricError = true
+                        biometricErrorDescription = authenticationError?.localizedDescription ?? "Unknown Error"
                     }
                 }
             }
