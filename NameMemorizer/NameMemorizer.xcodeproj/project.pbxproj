@@ -16,6 +16,8 @@
 		971FC889257B788400A5155D /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971FC888257B788400A5155D /* ImagePickerView.swift */; };
 		971FC890257B9CD400A5155D /* FileManager + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971FC88F257B9CD400A5155D /* FileManager + Extension.swift */; };
 		971FC893257BA3FE00A5155D /* PersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971FC892257BA3FE00A5155D /* PersonView.swift */; };
+		971FC897257BB1BB00A5155D /* LocationFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971FC896257BB1BB00A5155D /* LocationFetcher.swift */; };
+		971FC89A257BBADF00A5155D /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971FC899257BBADF00A5155D /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		971FC888257B788400A5155D /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 		971FC88F257B9CD400A5155D /* FileManager + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager + Extension.swift"; sourceTree = "<group>"; };
 		971FC892257BA3FE00A5155D /* PersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonView.swift; sourceTree = "<group>"; };
+		971FC896257BB1BB00A5155D /* LocationFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationFetcher.swift; sourceTree = "<group>"; };
+		971FC899257BBADF00A5155D /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,10 +69,12 @@
 				971FC872257B6D8200A5155D /* NameMemorizerApp.swift */,
 				971FC874257B6D8200A5155D /* ContentView.swift */,
 				971FC892257BA3FE00A5155D /* PersonView.swift */,
+				971FC899257BBADF00A5155D /* MapView.swift */,
 				971FC888257B788400A5155D /* ImagePickerView.swift */,
 				971FC885257B708F00A5155D /* PersonEditView.swift */,
 				971FC88F257B9CD400A5155D /* FileManager + Extension.swift */,
 				971FC882257B6DFD00A5155D /* Person.swift */,
+				971FC896257BB1BB00A5155D /* LocationFetcher.swift */,
 				971FC876257B6D8700A5155D /* Assets.xcassets */,
 				971FC87B257B6D8700A5155D /* Info.plist */,
 				971FC878257B6D8700A5155D /* Preview Content */,
@@ -155,10 +161,12 @@
 			files = (
 				971FC883257B6DFD00A5155D /* Person.swift in Sources */,
 				971FC875257B6D8200A5155D /* ContentView.swift in Sources */,
+				971FC897257BB1BB00A5155D /* LocationFetcher.swift in Sources */,
 				971FC873257B6D8200A5155D /* NameMemorizerApp.swift in Sources */,
 				971FC890257B9CD400A5155D /* FileManager + Extension.swift in Sources */,
 				971FC886257B708F00A5155D /* PersonEditView.swift in Sources */,
 				971FC889257B788400A5155D /* ImagePickerView.swift in Sources */,
+				971FC89A257BBADF00A5155D /* MapView.swift in Sources */,
 				971FC893257BA3FE00A5155D /* PersonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

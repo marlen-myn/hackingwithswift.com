@@ -26,6 +26,10 @@ struct PersonView: View {
                 Text("No image available")
             }
             
+            if contact.latitude != nil && contact.longitude != nil {
+                MapView(contact:contact)
+            }
+            
             Spacer()
         }
         .onAppear() {

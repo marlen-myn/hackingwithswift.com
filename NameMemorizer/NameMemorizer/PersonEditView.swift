@@ -6,24 +6,26 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct PersonEditView: View {
     @Binding var contactImage: UIImage?
     @Binding var showPersonEditForm: Bool
     @Binding var contacts: [Person]
     @State private var contactName: String = ""
+    let locationFetcher: LocationFetcher
     
     var body: some View {
         VStack {
             Form {
                 Image(uiImage: contactImage!)
-                        .resizable()
-                        .scaledToFit()
+                    .resizable()
+                    .scaledToFit()
                 Section(header: Text("Person's name")) {
                     TextField("Type the name ", text: $contactName)
                 }
             }
-
+            
             Spacer()
         }
         .navigationBarTitle(Text("Add Contact"), displayMode: .inline)
@@ -38,8 +40,17 @@ struct PersonEditView: View {
         })
     }
     
+    func getLastKnowLoncation() -> CLLocationCoordinate2D {
+        if let location = locationFetcher.lastKnownLocation {
+            return location
+        } else {
+            return CLLocationCoordinate2D()
+        }
+    }
+    
     func addContact(_ uuid: UUID) {
-        let newContact = Person(id: UUID(), name: contactName, photoId: uuid)
+        let location = getLastKnowLoncation()
+        let newContact = Person(id: UUID(), name: contactName, photoId: uuid, latitude: location.latitude, longitude: location.longitude)
         contacts.append(newContact)
     }
     

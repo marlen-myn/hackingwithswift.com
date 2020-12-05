@@ -12,15 +12,16 @@ struct ContentView: View {
     @State private var showPersonEditForm = false
     @State private var showImagePickerView = false
     @State private var contactImage: UIImage?
+    let locationFetcher = LocationFetcher()
     
     var body: some View {
          NavigationView {
                 if showPersonEditForm, contactImage != nil {
-                    PersonEditView(contactImage: $contactImage, showPersonEditForm: $showPersonEditForm, contacts: $contacts)
+                    PersonEditView(contactImage: $contactImage, showPersonEditForm: $showPersonEditForm, contacts: $contacts, locationFetcher: locationFetcher)
                 } else {
                     List {
                         ForEach(contacts.sorted()) { contact in
-                            NavigationLink(destination: PersonView(contact : contact)) {
+                            NavigationLink(destination: PersonView(contact: contact)) {
                                 Text(contact.name)
                             }
                         }
@@ -37,6 +38,7 @@ struct ContentView: View {
                 }
         }
         .onAppear() {
+            locationFetcher.start()
             loadData()
         }
     }
