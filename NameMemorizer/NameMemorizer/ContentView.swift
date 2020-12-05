@@ -19,8 +19,10 @@ struct ContentView: View {
                     PersonEditView(contactImage: $contactImage, showPersonEditForm: $showPersonEditForm, contacts: $contacts)
                 } else {
                     List {
-                        ForEach(contacts) { contact in
-                            Text(contact.name)
+                        ForEach(contacts.sorted()) { contact in
+                            NavigationLink(destination: PersonView(contact : contact)) {
+                                Text(contact.name)
+                            }
                         }
                     }
                     .sheet(isPresented: $showImagePickerView) {
@@ -35,9 +37,17 @@ struct ContentView: View {
                 }
         }
         .onAppear() {
-            // get information from documents directory
-            // decode into Person struct
-            // sort and pass to contacts property
+            loadData()
+        }
+    }
+    
+    func loadData() {
+        let filename = FileManager.getDataURL(filename: "SavedContacts")
+        do {
+            let data = try Data(contentsOf: filename)
+            contacts = try JSONDecoder().decode([Person].self, from: data)
+        } catch {
+            print(error.localizedDescription)
         }
     }
 }

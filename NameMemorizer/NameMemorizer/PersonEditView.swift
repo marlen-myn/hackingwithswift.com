@@ -30,15 +30,39 @@ struct PersonEditView: View {
         .navigationBarItems(leading: Button("Cancel") {
             showPersonEditForm = false
         }, trailing: Button("Save") {
-            saveData()
+            if let uuid = saveImage() {
+                addContact(uuid)
+                saveData()
+            }
             showPersonEditForm = false
         })
     }
     
-    func saveData() {
-        let newContact = Person(id: UUID(), name: contactName, photoId: UUID())
+    func addContact(_ uuid: UUID) {
+        let newContact = Person(id: UUID(), name: contactName, photoId: uuid)
         contacts.append(newContact)
-        // encode data into JSON from contacts list
-        // save data into user's document file system
+    }
+    
+    func saveImage() -> UUID? {
+        let id = UUID()
+        do {
+            try FileManager.saveImage(filename: id, image: contactImage!)
+            print("image saved")
+            return id
+        } catch {
+            print(error.localizedDescription)
+        }
+        return nil
+    }
+    
+    func saveData() {
+        let encoder = JSONEncoder()
+        do {
+            let encodedData = try encoder.encode(contacts)
+            try FileManager.saveData(encodedData, filename: "SavedContacts")
+            print("data saved")
+        } catch {
+            print(error.localizedDescription)
+        }
     }
 }
