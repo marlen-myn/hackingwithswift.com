@@ -19,13 +19,17 @@ struct AstronautView: View {
                         .resizable()
                         .scaledToFit()
                         .frame(maxWidth: geometry.size.width)
+                        .accessibility(removeTraits: .isImage)
+                        .accessibility(label: Text("Image of: \(astronaut.name)"))
                     
                     Text(astronaut.description)
+                        .accessibility(label: Text("Information about astronaut: \(astronaut.description)"))
                         .padding()
                     
                     HStack {
                         VStack(alignment: .leading) {
                             Text("All missions:")
+                                .accessibility(label: Text("All missions of astronauts"))
                                 .padding(.bottom)
                             
                             ForEach(missions) { mission in
@@ -35,11 +39,15 @@ struct AstronautView: View {
                                             .resizable()
                                             .scaledToFit()
                                             .frame(width:44, height:44)
+                                            .accessibility(label: Text("Logo of mission: \(mission.image)"))
                                         
                                         VStack(alignment:.leading) {
                                             Text(mission.displayName)
                                                 .font(.headline)
+                                                .accessibility(label: Text("Mission name: \(mission.displayName)"))
+                                            
                                             Text(mission.formattedLaunchDate)
+                                                .accessibility(label: Text("Mission launchdate: \(mission.formattedLaunchDate)"))
                                         }
                                     }
                                     .padding(.horizontal)

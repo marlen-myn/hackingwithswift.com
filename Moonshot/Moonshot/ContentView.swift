@@ -14,6 +14,7 @@ struct CrewMembersView: View {
         VStack(alignment: .leading) {
             ForEach(mission.astronauts, id:\.role) { crewMember in
                 Text("\(crewMember.astronaut.name)")
+                    .accessibility(label: Text("Crew member \(crewMember.astronaut.name)"))
             }
         }
     }
@@ -38,18 +39,23 @@ struct ContentView: View {
                     VStack(alignment:.leading) {
                         Text(mission.displayName)
                             .font(.headline)
+                            .accessibility(label: Text("Mission name \(mission.displayName))"))
                         if isLaunchDateShown {
                             Text(mission.formattedLaunchDate)
+                                .accessibility(label: Text("Launch date \(mission.formattedLaunchDate))"))
                         } else {
                             CrewMembersView(mission: mission)
                         }
                     }
                 }
+                .accessibility(hint: Text("Click to get more details"))
             }
             .navigationBarTitle("Moonshot")
-            .navigationBarItems(trailing: Button(isLaunchDateShown ? "Crew members" : "Launch Date"){
+            .navigationBarItems(trailing: Button(isLaunchDateShown ? "Crew members" : "Launch Date") {
                 isLaunchDateShown.toggle()
-            })
+            }
+            .accessibility(hint: Text("Toogle button to output information of either crew memebers or launch date in the table below"))
+            )
         }
     }
 }

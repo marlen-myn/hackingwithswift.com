@@ -22,6 +22,8 @@ struct CheckoutView: View {
                         .resizable()
                         .scaledToFit()
                         .frame(width: geo.size.width)
+                        .accessibility(hidden: true)
+                        
 
                     Text("Your total is $\(order.item.cost, specifier: "%g")")
                         .font(.title)
