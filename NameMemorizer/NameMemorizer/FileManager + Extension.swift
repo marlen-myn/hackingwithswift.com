@@ -8,12 +8,7 @@
 import UIKit
 
 extension FileManager {
-    static func saveImage(filename: UUID, image: UIImage) throws {
-        if let jpegData = image.jpegData(compressionQuality: 0.8) {
-            try jpegData.write(to: getDocumentsDirectory().appendingPathComponent(filename.uuidString), options: [.atomicWrite, .completeFileProtection])
-        }
-    }
-    
+
     static func saveData(_ data: Data, filename: String) throws {
         try data.write(to: getDocumentsDirectory().appendingPathComponent(filename), options: [.atomicWrite, .completeFileProtection])
     }

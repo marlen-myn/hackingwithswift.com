@@ -8,30 +8,32 @@
 import SwiftUI
 
 class Prospect: Identifiable, Codable {
-    let id = UUID()
+    var id = UUID()
     var name = "Anonymous"
     var emailAddress = ""
     fileprivate (set) var isConnected = false
+    var addedTime = Date()
 }
-
 
 class Prospects: ObservableObject {
     @Published fileprivate (set) var people: [Prospect]
     static let saveKey = "SavedData"
     
     init() {
-        if let data = UserDefaults.standard.data(forKey: Self.saveKey) {
-            if let decoded = try? JSONDecoder().decode([Prospect].self, from: data) {
-                people = decoded
-                return
-            }
+        let filename = FileManager.getDataURL(filename: Self.saveKey)
+        do {
+            let data = try Data(contentsOf: filename)
+            people = try JSONDecoder().decode([Prospect].self, from: data)
+            return
+        } catch {
+            print(error.localizedDescription)
         }
         people = []
     }
     
     private func save() {
         if let encoded = try? JSONEncoder().encode(people) {
-            UserDefaults.standard.setValue(encoded, forKey: Self.saveKey)
+            try? FileManager.saveData(encoded, filename: Self.saveKey)
         }
     }
     
@@ -45,4 +47,10 @@ class Prospects: ObservableObject {
         objectWillChange.send()
         save()
     }
+    
+    func delete(at indexOffset: IndexSet) {
+        people.remove(atOffsets: indexOffset)
+        save()
+    }
+
 }

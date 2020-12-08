@@ -16,6 +16,7 @@
 		97FC3DA6257E92CB00D5FF26 /* MeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FC3DA5257E92CB00D5FF26 /* MeView.swift */; };
 		97FC3DAA257E966100D5FF26 /* Prospect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FC3DA9257E966100D5FF26 /* Prospect.swift */; };
 		97FC3DAF257F8E0D00D5FF26 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 97FC3DAE257F8E0D00D5FF26 /* CodeScanner */; };
+		97FC3DB2257FC88500D5FF26 /* FileManager + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FC3DB1257FC88500D5FF26 /* FileManager + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		97FC3DA2257E92B200D5FF26 /* ProspectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProspectsView.swift; sourceTree = "<group>"; };
 		97FC3DA5257E92CB00D5FF26 /* MeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeView.swift; sourceTree = "<group>"; };
 		97FC3DA9257E966100D5FF26 /* Prospect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prospect.swift; sourceTree = "<group>"; };
+		97FC3DB1257FC88500D5FF26 /* FileManager + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "FileManager + Extension.swift"; path = "../../NameMemorizer/NameMemorizer/FileManager + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		976E141A257D072000E2EF83 /* HotProspects */ = {
 			isa = PBXGroup;
 			children = (
+				97FC3DB1257FC88500D5FF26 /* FileManager + Extension.swift */,
 				97FC3DA9257E966100D5FF26 /* Prospect.swift */,
 				976E141B257D072000E2EF83 /* HotProspectsApp.swift */,
 				976E141D257D072000E2EF83 /* ContentView.swift */,
@@ -162,6 +165,7 @@
 				97FC3DA6257E92CB00D5FF26 /* MeView.swift in Sources */,
 				97FC3DAA257E966100D5FF26 /* Prospect.swift in Sources */,
 				976E141E257D072000E2EF83 /* ContentView.swift in Sources */,
+				97FC3DB2257FC88500D5FF26 /* FileManager + Extension.swift in Sources */,
 				976E141C257D072000E2EF83 /* HotProspectsApp.swift in Sources */,
 				97FC3DA3257E92B200D5FF26 /* ProspectsView.swift in Sources */,
 			);
