@@ -12,9 +12,20 @@ struct CardView: View {
     @State private var feedback = UINotificationFeedbackGenerator()
     @Environment(\.accessibilityEnabled) var accessibilityEnabled
     let card: Card
+    var delaying: (() -> Void)? = nil
     var removal: (() -> Void)? = nil
     @State private var isShowingAnswer = false
     @State private var offset = CGSize.zero
+    
+    func getOfsetColor() -> Color {
+        if offset.width > 0 {
+            return Color.green
+        } else if offset.width < 0 {
+            return Color.red
+        } else {
+            return Color.white
+        }
+    }
     
     var body: some View {
         ZStack {
@@ -29,7 +40,7 @@ struct CardView: View {
                     differentiateWithoutColor
                         ? nil
                         : RoundedRectangle(cornerRadius: 25, style: .continuous)
-                        .fill(offset.width > 0 ? Color.green : Color.red)
+                        .fill(getOfsetColor())
                 )
                 .shadow(radius: 10)
             
@@ -42,7 +53,7 @@ struct CardView: View {
                     Text(card.prompt)
                         .font(.largeTitle)
                         .foregroundColor(.black)
-
+                    
                     if isShowingAnswer {
                         Text(card.answer)
                             .font(.title)
@@ -67,11 +78,11 @@ struct CardView: View {
                 .onEnded { _ in
                     if abs(offset.width) > 100 {
                         if self.offset.width > 0 {
-                            self.feedback.notificationOccurred(.success)
+                            self.removal?()
                         } else {
                             self.feedback.notificationOccurred(.error)
+                            self.delaying?()
                         }
-                        self.removal?()
                     } else {
                         offset = .zero
                     }
@@ -81,11 +92,5 @@ struct CardView: View {
             isShowingAnswer.toggle()
         }
         .animation(.spring())
-    }
-}
-
-struct CardView_Previews: PreviewProvider {
-    static var previews: some View {
-        CardView(card: Card.example)
     }
 }
