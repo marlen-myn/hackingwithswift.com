@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9715DE19258367DB00A23010 /* EditCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9715DE18258367DB00A23010 /* EditCards.swift */; };
 		9724B71A257FE13600111B57 /* FlashzillaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9724B719257FE13600111B57 /* FlashzillaApp.swift */; };
 		9724B71C257FE13600111B57 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9724B71B257FE13600111B57 /* ContentView.swift */; };
 		9724B71E257FE13B00111B57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9724B71D257FE13B00111B57 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9715DE18258367DB00A23010 /* EditCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCards.swift; sourceTree = "<group>"; };
 		9724B716257FE13600111B57 /* Flashzilla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flashzilla.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9724B719257FE13600111B57 /* FlashzillaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashzillaApp.swift; sourceTree = "<group>"; };
 		9724B71B257FE13600111B57 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				9724B719257FE13600111B57 /* FlashzillaApp.swift */,
 				9724B71B257FE13600111B57 /* ContentView.swift */,
 				974FFB7A25828359003B0031 /* Card.swift */,
+				9715DE18258367DB00A23010 /* EditCards.swift */,
 				974FFB7D25828469003B0031 /* CardView.swift */,
 				9724B71D257FE13B00111B57 /* Assets.xcassets */,
 				9724B722257FE13B00111B57 /* Info.plist */,
@@ -147,6 +150,7 @@
 				9724B71C257FE13600111B57 /* ContentView.swift in Sources */,
 				974FFB7B25828359003B0031 /* Card.swift in Sources */,
 				974FFB7E25828469003B0031 /* CardView.swift in Sources */,
+				9715DE19258367DB00A23010 /* EditCards.swift in Sources */,
 				9724B71A257FE13600111B57 /* FlashzillaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
