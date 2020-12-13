@@ -18,7 +18,7 @@ struct MissionView: View {
     let astronauts: [CrewMember]
     
     func logoWidth(_ geo: GeometryProxy) -> CGFloat? {
-        return geo.frame(in: .global).maxY * 0.65 > geo.frame(in: .local).midX * 0.8 ? geo.frame(in: .global).maxY * 0.65 : geo.frame(in: .global).midX * 0.8
+        return geo.frame(in: .global).maxY > geo.frame(in: .global).midX ? geo.frame(in: .global).maxY * 0.65 : geo.frame(in: .global).midX * 0.65
     }
     
     var body: some View {
@@ -36,6 +36,10 @@ struct MissionView: View {
                             .padding()
                             .accessibility(hint: Text("Logo of mission illustrated"))
                             .animation(.default)
+                            .onTapGesture() {
+                                print("\(geo.frame(in: .global).maxY)")
+                                print("\(geo.frame(in: .global).midX)")
+                            }
                         Spacer()
                     }
                 }
