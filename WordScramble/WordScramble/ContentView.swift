@@ -17,31 +17,58 @@ struct ContentView: View {
     @State private var errorMessage = ""
     @State private var showingError = false
     
+    @State var isScrolled = false
+    let colors = [Color.red, Color.blue, Color.green, Color.black, Color.orange, Color.pink]
+    
+    func getColor(_ geo: GeometryProxy, _ index: Int) -> Color {
+        let threshold: CGFloat = 264.0 + CGFloat(index) * geo.size.height * 2
+        if geo.frame(in: .global).minY > threshold {
+            return colors[index % colors.count]
+        } else {
+            return Color.black
+        }
+    }
+    
     var body: some View {
-        NavigationView {
-            VStack {
-                TextField("Enter new word", text:$newWord, onCommit: addNewWord)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .autocapitalization(.none)
-                    .padding()
-                
-                List(usedWords, id: \.self) { word in
-                    HStack {
-                        Image(systemName: "\(word.count).circle")
-                        Text(word)
-                    }
-                    .accessibilityElement(children: .ignore)
-                    .accessibility(label: Text("\(word), \(word.count) letters"))
+        GeometryReader { fullsize in
+            NavigationView {
+                VStack {
+                    TextField("Enter new word", text:$newWord, onCommit: addNewWord)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .autocapitalization(.none)
+                        .padding()
                     
+                    List(0..<usedWords.count, id: \.self) { index in
+                        
+                        GeometryReader { geo in
+                            HStack {
+                                Image(systemName: "\(usedWords[index].count).circle")
+                                    .foregroundColor(getColor(geo, index))
+                                Text(usedWords[index])
+                            }
+                            .onTapGesture {
+                                print("fullsize height: \(fullsize.size.height)")
+                                print("fullsize minY : \(fullsize.frame(in: .global).minY)")
+                                print("geo height: \(geo.size.height)")
+                                print("geo minY : \(geo.frame(in: .global).minY)")
+                            }
+                            .offset(x: max(0, geo.frame(in: .global).maxY - fullsize.size.height * 0.8), y:0)
+                            .accessibilityElement(children: .ignore)
+                            .accessibility(label: Text("\(usedWords[index]), \(usedWords[index].count) letters"))
+                            .animation(.default)
+                        }
+                    }
+                    
+                    Text("Score: \(score)")
                 }
-                Text("Score: \(score)")
+                .navigationBarTitle(rootWord)
+                .navigationBarItems(trailing: Button("New Game", action: startGame))
+                .onAppear(perform: startGame)
+                .alert(isPresented: $showingError) {
+                    Alert(title: Text(errorTitle), message: Text(errorMessage), dismissButton: .default(Text("Ok")))
+                }
             }
-            .navigationBarTitle(rootWord)
-            .navigationBarItems(trailing: Button("New Game", action: startGame))
-            .onAppear(perform: startGame)
-            .alert(isPresented: $showingError) {
-                Alert(title: Text(errorTitle), message: Text(errorMessage), dismissButton: .default(Text("Ok")))
-            }
+            .navigationViewStyle(StackNavigationViewStyle())
         }
     }
     

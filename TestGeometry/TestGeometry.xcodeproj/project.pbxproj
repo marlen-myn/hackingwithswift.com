@@ -7,23 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		974BA60325861CD000127762 /* TestGeometryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974BA60225861CD000127762 /* TestGeometryApp.swift */; };
-		974BA60525861CD000127762 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974BA60425861CD000127762 /* ContentView.swift */; };
-		974BA60725861CD500127762 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 974BA60625861CD500127762 /* Assets.xcassets */; };
-		974BA60A25861CD500127762 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 974BA60925861CD500127762 /* Preview Assets.xcassets */; };
+		97DC6D8B25866EDF00B88DDB /* TestGeometryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DC6D8A25866EDF00B88DDB /* TestGeometryApp.swift */; };
+		97DC6D8D25866EDF00B88DDB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DC6D8C25866EDF00B88DDB /* ContentView.swift */; };
+		97DC6D8F25866EE300B88DDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97DC6D8E25866EE300B88DDB /* Assets.xcassets */; };
+		97DC6D9225866EE300B88DDB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97DC6D9125866EE300B88DDB /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		974BA5FF25861CD000127762 /* TestGeometry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestGeometry.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		974BA60225861CD000127762 /* TestGeometryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGeometryApp.swift; sourceTree = "<group>"; };
-		974BA60425861CD000127762 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		974BA60625861CD500127762 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		974BA60925861CD500127762 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		974BA60B25861CD500127762 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97DC6D8725866EDE00B88DDB /* TestGeometry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestGeometry.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		97DC6D8A25866EDF00B88DDB /* TestGeometryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGeometryApp.swift; sourceTree = "<group>"; };
+		97DC6D8C25866EDF00B88DDB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		97DC6D8E25866EE300B88DDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		97DC6D9125866EE300B88DDB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		97DC6D9325866EE300B88DDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		974BA5FC25861CD000127762 /* Frameworks */ = {
+		97DC6D8425866EDE00B88DDB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,38 +33,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		974BA5F625861CD000127762 = {
+		97DC6D7E25866EDE00B88DDB = {
 			isa = PBXGroup;
 			children = (
-				974BA60125861CD000127762 /* TestGeometry */,
-				974BA60025861CD000127762 /* Products */,
+				97DC6D8925866EDE00B88DDB /* TestGeometry */,
+				97DC6D8825866EDE00B88DDB /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		974BA60025861CD000127762 /* Products */ = {
+		97DC6D8825866EDE00B88DDB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				974BA5FF25861CD000127762 /* TestGeometry.app */,
+				97DC6D8725866EDE00B88DDB /* TestGeometry.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		974BA60125861CD000127762 /* TestGeometry */ = {
+		97DC6D8925866EDE00B88DDB /* TestGeometry */ = {
 			isa = PBXGroup;
 			children = (
-				974BA60225861CD000127762 /* TestGeometryApp.swift */,
-				974BA60425861CD000127762 /* ContentView.swift */,
-				974BA60625861CD500127762 /* Assets.xcassets */,
-				974BA60B25861CD500127762 /* Info.plist */,
-				974BA60825861CD500127762 /* Preview Content */,
+				97DC6D8A25866EDF00B88DDB /* TestGeometryApp.swift */,
+				97DC6D8C25866EDF00B88DDB /* ContentView.swift */,
+				97DC6D8E25866EE300B88DDB /* Assets.xcassets */,
+				97DC6D9325866EE300B88DDB /* Info.plist */,
+				97DC6D9025866EE300B88DDB /* Preview Content */,
 			);
 			path = TestGeometry;
 			sourceTree = "<group>";
 		};
-		974BA60825861CD500127762 /* Preview Content */ = {
+		97DC6D9025866EE300B88DDB /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				974BA60925861CD500127762 /* Preview Assets.xcassets */,
+				97DC6D9125866EE300B88DDB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -72,13 +72,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		974BA5FE25861CD000127762 /* TestGeometry */ = {
+		97DC6D8625866EDE00B88DDB /* TestGeometry */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 974BA60E25861CD500127762 /* Build configuration list for PBXNativeTarget "TestGeometry" */;
+			buildConfigurationList = 97DC6D9625866EE300B88DDB /* Build configuration list for PBXNativeTarget "TestGeometry" */;
 			buildPhases = (
-				974BA5FB25861CD000127762 /* Sources */,
-				974BA5FC25861CD000127762 /* Frameworks */,
-				974BA5FD25861CD000127762 /* Resources */,
+				97DC6D8325866EDE00B88DDB /* Sources */,
+				97DC6D8425866EDE00B88DDB /* Frameworks */,
+				97DC6D8525866EDE00B88DDB /* Resources */,
 			);
 			buildRules = (
 			);
@@ -86,24 +86,24 @@
 			);
 			name = TestGeometry;
 			productName = TestGeometry;
-			productReference = 974BA5FF25861CD000127762 /* TestGeometry.app */;
+			productReference = 97DC6D8725866EDE00B88DDB /* TestGeometry.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		974BA5F725861CD000127762 /* Project object */ = {
+		97DC6D7F25866EDE00B88DDB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1220;
 				LastUpgradeCheck = 1220;
 				TargetAttributes = {
-					974BA5FE25861CD000127762 = {
+					97DC6D8625866EDE00B88DDB = {
 						CreatedOnToolsVersion = 12.2;
 					};
 				};
 			};
-			buildConfigurationList = 974BA5FA25861CD000127762 /* Build configuration list for PBXProject "TestGeometry" */;
+			buildConfigurationList = 97DC6D8225866EDE00B88DDB /* Build configuration list for PBXProject "TestGeometry" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -111,42 +111,42 @@
 				en,
 				Base,
 			);
-			mainGroup = 974BA5F625861CD000127762;
-			productRefGroup = 974BA60025861CD000127762 /* Products */;
+			mainGroup = 97DC6D7E25866EDE00B88DDB;
+			productRefGroup = 97DC6D8825866EDE00B88DDB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				974BA5FE25861CD000127762 /* TestGeometry */,
+				97DC6D8625866EDE00B88DDB /* TestGeometry */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		974BA5FD25861CD000127762 /* Resources */ = {
+		97DC6D8525866EDE00B88DDB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				974BA60A25861CD500127762 /* Preview Assets.xcassets in Resources */,
-				974BA60725861CD500127762 /* Assets.xcassets in Resources */,
+				97DC6D9225866EE300B88DDB /* Preview Assets.xcassets in Resources */,
+				97DC6D8F25866EE300B88DDB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		974BA5FB25861CD000127762 /* Sources */ = {
+		97DC6D8325866EDE00B88DDB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				974BA60525861CD000127762 /* ContentView.swift in Sources */,
-				974BA60325861CD000127762 /* TestGeometryApp.swift in Sources */,
+				97DC6D8D25866EDF00B88DDB /* ContentView.swift in Sources */,
+				97DC6D8B25866EDF00B88DDB /* TestGeometryApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		974BA60C25861CD500127762 /* Debug */ = {
+		97DC6D9425866EE300B88DDB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -207,7 +207,7 @@
 			};
 			name = Debug;
 		};
-		974BA60D25861CD500127762 /* Release */ = {
+		97DC6D9525866EE300B88DDB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -262,7 +262,7 @@
 			};
 			name = Release;
 		};
-		974BA60F25861CD500127762 /* Debug */ = {
+		97DC6D9725866EE300B88DDB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -284,7 +284,7 @@
 			};
 			name = Debug;
 		};
-		974BA61025861CD500127762 /* Release */ = {
+		97DC6D9825866EE300B88DDB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -309,25 +309,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		974BA5FA25861CD000127762 /* Build configuration list for PBXProject "TestGeometry" */ = {
+		97DC6D8225866EDE00B88DDB /* Build configuration list for PBXProject "TestGeometry" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				974BA60C25861CD500127762 /* Debug */,
-				974BA60D25861CD500127762 /* Release */,
+				97DC6D9425866EE300B88DDB /* Debug */,
+				97DC6D9525866EE300B88DDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		974BA60E25861CD500127762 /* Build configuration list for PBXNativeTarget "TestGeometry" */ = {
+		97DC6D9625866EE300B88DDB /* Build configuration list for PBXNativeTarget "TestGeometry" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				974BA60F25861CD500127762 /* Debug */,
-				974BA61025861CD500127762 /* Release */,
+				97DC6D9725866EE300B88DDB /* Debug */,
+				97DC6D9825866EE300B88DDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 974BA5F725861CD000127762 /* Project object */;
+	rootObject = 97DC6D7F25866EDE00B88DDB /* Project object */;
 }
