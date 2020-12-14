@@ -12,13 +12,13 @@ struct DiceView: View {
     
     var body: some View {
         ZStack {
+            RoundedRectangle(cornerRadius: 30)
+                .fill(Color.blue)
+                .frame(width:100, height:100)
+            
             Text("\(dice.value)")
                 .font(.largeTitle)
-                .foregroundColor(.blue)
-            
-            RoundedRectangle(cornerRadius: 25)
-                .stroke(Color.blue, lineWidth: 4)
-                .frame(width:100, height:100)
+                .foregroundColor(.white)
         }
     }
 }

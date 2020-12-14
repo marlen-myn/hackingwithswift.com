@@ -9,7 +9,7 @@ import Foundation
 
 class DiceGenerator: ObservableObject {
     @Published var dices = [Dice(sides: 6), Dice(sides: 6)]
-    @Published private(set) var isGenerated = false
+    @Published private(set) var isGenerated = true
     static let sides = ["2","6","8","10","12","20","100"]
     
     func setDecies(count: Int, sides: Int) {
@@ -25,9 +25,9 @@ class DiceGenerator: ObservableObject {
         
         let group = DispatchGroup()
         for dice in dices {
-            for delay in 0..<10 {
+            for delay in 0..<70 {
                 group.enter()
-                DispatchQueue.main.asyncAfter(deadline: .now() + Double(delay)) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + Double(delay)/10) {
                     dice.value = Int.random(in: 1...dice.sides)
                     group.leave()
                 }
